@@ -1,0 +1,17 @@
+Simple reference pointing >> orginal will change after making changes in the new reference
+ob1 original -- 10 20 30 40
+ob1 changed -- 100 20 1000 40
+ob2 original -- 100 20 1000 40
+================================================================================
+Shallow Cloning >> original primitives won't change, but non primitives will change 
+----------------- Trying after implementing Cloneable interface -----------------
+Exception since Cloneable interface is not implemented!!
+Original Before : 10 & 20 & 99 & 99
+Cloned   : 99 & 99 & 99 & 99
+Original After : 10 & 20 & 99 & 99
+================================================================================
+Deep Cloning >> will original change ?? No, neither primitives nor non primitives
+Original Before : 10 & 20 & 30 & 40
+Cloned   : 55 & 66 & 77 & 88
+Original After : 10 & 20 & 30 & 40
+========= The End - Visit thecodebuddy.blogspot.in for more stuff ===============
