@@ -36,6 +36,8 @@ public class CloningDemo {
 
 		System.out.println("----------------- Trying after implementing Cloneable interface -----------------");
 		CloneableTest cloneableTest = new CloneableTest();
+		System.out.println("Original Before : " + cloneableTest.var1 + " & " + cloneableTest.var2 + " & "
+				+ cloneableTest.dummy.aVar + " & " + cloneableTest.dummy.bVar);
 		CloneableTest newCloneable = null;
 		try {
 			newCloneable = (CloneableTest) cloneableTest.clone();
@@ -47,17 +49,19 @@ public class CloningDemo {
 			// e.printStackTrace();
 			System.err.println("Exception since Cloneable interface is not implemented!!");
 		}
-		System.out.println("Original Before : " + cloneableTest.var1 + " & " + cloneableTest.var2 + " & "
-				+ cloneableTest.dummy.aVar + " & " + cloneableTest.dummy.bVar);
+		
 		System.out.println("Cloned   : " + newCloneable.var1 + " & " + newCloneable.var2 + " & "
 				+ newCloneable.dummy.aVar + " & " + newCloneable.dummy.bVar);
 		System.out.println("Original After : " + cloneableTest.var1 + " & " + cloneableTest.var2 + " & "
 				+ cloneableTest.dummy.aVar + " & " + cloneableTest.dummy.bVar);
 
+		
 		System.out.println("================================================================================");
 
 		System.out.println("Deep Cloning >> will original change ?? No, neither primitives nor non primitives");
 		CloneableDeepTest cloneableDeepTest = new CloneableDeepTest();
+		System.out.println("Original Before : " + cloneableDeepTest.var1 + " & " + cloneableDeepTest.var2 + " & "
+				+ cloneableDeepTest.dummy.aVar + " & " + cloneableDeepTest.dummy.bVar);
 		CloneableDeepTest cloneableDeepTest2 = null;
 		try {
 			cloneableDeepTest2 = (CloneableDeepTest) cloneableDeepTest.clone();
@@ -69,8 +73,7 @@ public class CloningDemo {
 			// e.printStackTrace();
 			System.err.println("Exception since Cloneable interface is not implemented!!");
 		}
-		System.out.println("Original Before : " + cloneableDeepTest.var1 + " & " + cloneableDeepTest.var2 + " & "
-				+ cloneableDeepTest.dummy.aVar + " & " + cloneableDeepTest.dummy.bVar);
+		
 		System.out.println("Cloned   : " + cloneableDeepTest2.var1 + " & " + cloneableDeepTest2.var2 + " & "
 				+ cloneableDeepTest2.dummy.aVar + " & " + cloneableDeepTest2.dummy.bVar);
 		System.out.println("Original After : " + cloneableDeepTest.var1 + " & " + cloneableDeepTest.var2 + " & "
