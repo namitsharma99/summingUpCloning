@@ -6,7 +6,7 @@ ob2 original -- 100 20 1000 40
 Shallow Cloning >> original primitives won't change, but non primitives will change 
 ----------------- Trying after implementing Cloneable interface -----------------
 Exception since Cloneable interface is not implemented!!
-Original Before : 10 & 20 & 99 & 99
+Original Before : 10 & 20 & 30 & 40
 Cloned   : 99 & 99 & 99 & 99
 Original After : 10 & 20 & 99 & 99
 ================================================================================
